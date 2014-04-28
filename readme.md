@@ -1,10 +1,15 @@
-Getting and cleaning Data : Assignment
+Peer Assignment 
+Getting and Cleaning Data
 ======================================
 
 "Human Activity Recognition Using Smartphones Dataset Version 1.0"
 -----------------------------------------------------------------
 
 ```
+For the purpose of this analysis, the "test" and "train" datasets were merged into a single
+dataset "maindf", then extracting (subsetting) those variables that averaged out the mean 
+and standard deviation measurements. The variables were then cleaned into a descriptive more readable form. 
+
 
 "Experiments on 30 subjects in the age group of 19-48 were carried out. 
 Each person performed six activities wearing a smartphone (Samsung Galaxy S II) on the waist. 
@@ -16,18 +21,20 @@ These activities are :
 5.STANDING, 
 6.LAYING
 
-With 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz were captured using the smartphone's embedded accelerometer and gyroscope. 
-The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 
-50% overlap (128 readings/window). 
-The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. 
-The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. 
-The obtained dataset was randomly partitioned into two sets, where 70% of the volunteers were selected for generating the training data and 30% the test data. 
-
-**For the purpose of this analysis, we merged the test and train datasets into a single dataset 'merged', then extracting (subsetting) those variables that averaged out the mean and standard deviation measurements. The variables were then cleaned into a descriptive more readable form.**
+With 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz 
+were captured using the smartphone's embedded accelerometer and gyroscope. The sensor signals 
+(accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled 
+in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor 
+acceleration signal, which has gravitational and body motion components, was separated using 
+a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is 
+assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency 
+was used. From each window, a vector of features was obtained by calculating variables from the 
+time and frequency domain. The obtained dataset was randomly partitioned into two sets, where 
+70% of the volunteers were selected for generating the training data and 30% the test data. 
 
 For each record the following information has been provided:
 
-* Triaxial acceleration from the accelerometer (total acceleration) and the estimated body    acceleration.
+* Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
 * Triaxial Angular velocity from the gyroscope. 
 * A 561-feature vector with time and frequency domain variables. 
 * Its activity label. 
@@ -43,26 +50,20 @@ For the purpose of this analysis, following files from the 'UCI HAR dataset' hav
 * 'test/X_test.txt': Test set.
 * 'test/y_test.txt': Test labels.
 
-
 ### Notes: 
-
 - Features are normalized and bounded within [-1,1].
-- Each feature vector is a row on the text file." **[1]**
-- The UCI HAR dataset was downloaded for the purpose into the working directory.**[2]**
+- Each feature vector is a row on the text file." [1]
+- The UCI HAR dataset was downloaded and unzipped for the purpose into the working directory. [2]
 
 ### Files included for the purpose of this project :
-
-- 'READme.md'     : Brief Introduction about the project
-- 'run_Analysis.R': The code script in R.
-- 'CodeBook.md'   : details the data viz names, dimensions, tidying, transformations;
+- 'readme.md'     : Brief Introduction about the project. (This document)
+- 'run_analysis.R': The code in R script.
+- 'codebook.md'   : details the data viz names, dimensions, tidying, transformations;
                     and explaining the code 
 
 ### REFERENCEs :
-1. UCI HAR dataset : 'README.txt'
-2. Coursera link to the UCI HAR dataset :
+[1] UCI HAR dataset : 'README.txt'
+[2] Coursera link to the UCI HAR dataset :
    https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 ```
-
-
-
