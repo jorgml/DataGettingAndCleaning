@@ -11,7 +11,6 @@ For the purpose of this analysis, the "test" and "train" datasets were merged in
 dataset "maindf", then extracting (subsetting) those variables that averaged out the mean 
 and standard deviation measurements. The variables were then cleaned into a descriptive more readable form. 
 
-
 "Experiments on 30 subjects in the age group of 19-48 were carried out. 
 Each person performed six activities wearing a smartphone (Samsung Galaxy S II) on the waist. 
 These activities are :
