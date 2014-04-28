@@ -48,4 +48,4 @@ tidydata[,2]<-mapvalues(tidydata[,2],from = c("1","2","3","4","5","6"), to = c("
 
 ## Writing 'tidydata' into a text file "tidy.txt"
 write.table(tidydata, file="~/tidy.txt", sep="\t", row.names=FALSE)
-message("The file 'tidy.txt' was created in the working directory wuth the tidy dataset.")
+message("The file 'tidy.txt' was created in the working directory with the tidy dataset.")
