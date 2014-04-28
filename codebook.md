@@ -12,7 +12,7 @@ INDEX
 4. REFERENCES
 
 ```
-```{r}
+```
 
 ### 1. DATA PROCESSING
 
