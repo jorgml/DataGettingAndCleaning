@@ -1,5 +1,8 @@
-Getting and cleaning Data : Assignment - codebook
-==================================================
+Peer Assignment Codebook
+=
+Getting and Cleaning Data : 
+====================================================
+
 ```
 INDEX
 -----
@@ -30,12 +33,12 @@ For the purpose of this project, the following files have been referred from the
 ```
 ```{r}
 # Reading Files
-sub.test<-read.table("C:/Users/Toshiba/Documents/UCI HAR Dataset/test/subject_test.txt")
-x.test<-read.table("C:/Users/Toshiba/Documents/UCI HAR Dataset/test/X_test.txt")
-y.test<-read.table("C:/Users/Toshiba/Documents/UCI HAR Dataset/test/y_test.txt")
-sub.train<-read.table("C:/Users/Toshiba/Documents/UCI HAR Dataset/train/subject_train.txt")
-x.train<-read.table("C:/Users/Toshiba/Documents/UCI HAR Dataset/train/X_train.txt")
-y.train<-read.table("C:/Users/Toshiba/Documents/UCI HAR Dataset/train/y_train.txt")
+sub.test<-read.table("~/UCI HAR Dataset/test/subject_test.txt")
+x.test<-read.table("~/UCI HAR Dataset/test/X_test.txt")
+y.test<-read.table("~/UCI HAR Dataset/test/y_test.txt")
+sub.train<-read.table("~/UCI HAR Dataset/train/subject_train.txt")
+x.train<-read.table("~/UCI HAR Dataset/train/X_train.txt")
+y.train<-read.table("~/UCI HAR Dataset/train/y_train.txt")
 ```
 ```
 After reading the files, we made the test and the train data frames. 
@@ -57,7 +60,7 @@ This 'merged' dataset has 10299 rows and 563 columns (variables), but does not h
 ```{r}
 # Reading the variable names from 'features.txt' file 
 # and storing names into a vector 'c.name.mod'
-c.name<-read.table("C:/Users/Toshiba/Documents/UCI HAR Dataset/features.txt")
+c.name<-read.table("~/UCI HAR Dataset/features.txt")
 c.name.mod<-as.vector(c.name[,2])
 # Incorporating the labels "subject" and "activity
 c.name.mod1<-append(c.name.mod,"subject",after=FALSE)
@@ -141,8 +144,21 @@ pertaining to **6 activities** :
 5.STANDING, 
 6.LAYING
  
-"The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. 
+   "The features selected for this database come from the accelerometer and gyroscope 3-axial 
+raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) 
+were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and 
+a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. 
+Similarly, the acceleration signal was then separated into body and gravity acceleration 
+signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a 
+corner frequency of 0.3 Hz. Subsequently, the body linear acceleration and angular velocity 
+were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). 
+   Also the magnitude of these three-dimensional signals were calculated using the Euclidean 
+norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing 
+fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. 
+
 **(Note the 't' to indicate the time domain and 'f' the frequency domain signals)**. 
+
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 tBodyAcc-XYZ          (3)
@@ -165,8 +181,8 @@ fBodyGyroJerkMag      (1)
 
 The set of variables that were estimated from these signals are: 
 mean(): Mean value
-std(): Standard deviation" **[2]**
-This has been explained as in the UCI HAR dataset "features_info.txt" file. **[2]**
+std(): Standard deviation" [2]
+This has been explained as in the UCI HAR dataset "features_info.txt" file. [2]
 i.e. a total of 68 variables 
 = 1 (for subject) + 1 (for activity) + 33 (for mean) + 33 (for standard deviation)
 
@@ -198,7 +214,6 @@ The names of  variables of the tidy data set have been enlisted below :
 
 
 ### 4. REFERENCES :
-1. 'READme.md' : shared with this project
-2. UCI HAR Dataset : (Coursera link)
-   https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+[1] 'readme.md' : also in this project
+[2] UCI HAR Dataset : https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 ```
