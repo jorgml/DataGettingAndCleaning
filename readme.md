@@ -50,16 +50,18 @@ For the purpose of this analysis, following files from the 'UCI HAR dataset' hav
 * 'test/X_test.txt': Test set.
 * 'test/y_test.txt': Test labels.
 
-### Notes: 
-- Features are normalized and bounded within [-1,1].
-- Each feature vector is a row on the text file." [1]
-- The UCI HAR dataset was downloaded and unzipped for the purpose into the working directory. [2]
-
 ### Files included for the purpose of this project :
 - 'readme.md'     : Brief Introduction about the project. (This document)
 - 'run_analysis.R': The code in R script.
 - 'codebook.md'   : details the data viz names, dimensions, tidying, transformations;
                     and explaining the code 
+
+### Notes: 
+- Features are normalized and bounded within [-1,1].
+- Each feature vector is a row on the text file." [1]
+- The UCI HAR dataset was downloaded and unzipped for the purpose into the working directory. [2]
+
+
 
 ### REFERENCEs :
 [1] UCI HAR dataset : 'README.txt'
